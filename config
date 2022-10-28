@@ -1,10 +1,10 @@
 # Installation directories
 
 # Default prefix
-PREFIX ?= /usr
+PREFIX ?= /usr/local
 
 # Lua version and dirs
-LUA_SYS_VER ?= 5.2
+LUA_SYS_VER ?= 5.3
 LUA_LIBDIR ?= $(PREFIX)/lib/lua/$(LUA_SYS_VER)
 LUA_DIR ?= $(PREFIX)/share/lua/$(LUA_SYS_VER)
 LUA_INC ?= $(PREFIX)/include/lua$(LUA_SYS_VER)
@@ -36,7 +36,7 @@ DRIVER_INCS_postgres ?= -I/usr/include/postgresql
 DRIVER_LIBS_sqlite ?= -lsqlite
 DRIVER_INCS_sqlite ?=
 # - SQLite3 
-DRIVER_LIBS_sqlite3 ?= -L/opt/local/lib -lsqlite3
+DRIVER_LIBS_sqlite3 ?= -L/opt/local/lib -lsqlite3 -L/usr/local/lib -llua
 DRIVER_INCS_sqlite3 ?= -I/opt/local/include
 # - ODBC
 DRIVER_LIBS_odbc ?= -L/usr/local/lib -lodbc
